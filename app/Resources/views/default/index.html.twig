@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dirox</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <script src="js/ie/html5shiv.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/ie9.css" />
+    <link rel="stylesheet" href="css/ie8.css" />
+</head>
+<body class="landing">
+<div id="page-wrapper">
+    <header id="header">
+        <nav id="nav">
+            <ul>
+                {% if isLogin==false %}
+                <li><a href="{{ url('loginpage') }}" class="button special">Sign In</a></li>
+
+                {% else %}
+                    <li><a href="{{ url('profilepage') }}" class="btn btn-default">Profile</a></li>
+                <li><a href="{{ url('logoutpage') }}" class="button special">Sign Out </a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <section id="banner">
+        <div class="content">
+            {% if isLogin==true %}
+            <header>
+                <h2>Welcome {{ firstname }} {{ lastname }} to Dirox</h2>
+                <p>Yesterday is history, tomorrow is a mystery,</br> today is a gift of God, which is why we call it the present
+                    </p>
+            </header>
+            <span class="image"><img src="{{ image }}" alt="" /></span>
+            {% else %}
+                <header>
+                    <h2>Would you like to Sign In to Dirox?</h2>
+                    <p>Yesterday is history, tomorrow is a mystery,</br> today is a gift of God, which is why we call it the present
+                    </p>
+                </header>
+                <span class="image"><img src="http://thieunien.vn/files/s-1607591419503301/2015/1225/567d03ce-e736adc214.jpg" alt="" /></span>
+            {% endif %}
+        </div>
+        <a href="#one" class="goto-next scrolly">Next</a>
+    </section>
+
+    <!-- One -->
+    <section id="one" class="spotlight style1 bottom">
+        <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="4u 12u$(medium)">
+                        <header>
+                            <h2>Dirox IT Software Outsourcing And Mobile Application Developer In VietNam</h2>
+                        </header>
+                    </div>
+                    <div class="4u 12u$(medium)">
+                        <p>Since 2003, Dirox has contributed to a wide range of software developments from short term projects to fully fledged product lines,
+                            involving complex technical back ends, front ends or mobile platforms,
+                            always with the same focus toward quality, time, cost efficiency and excellence. </p>
+                    </div>
+                    <div class="4u$ 12u$(medium)">
+                        <p>Technologies :: Php, Java, ASP.NET, RoR, NodeJs -- Symfony, CodeIgniter, Zend, Drupal,
+                            Prestashop, Wordpress, Html/Css, Angular -- iOS, Android, Windows Phone, Cordova, Unity, Xamarin .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#two" class="goto-next scrolly">Next</a>
+    </section>
+
+    <!-- Two --
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="https://twitter.com" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="https://linkedin.com" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.instagram.com" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://github.com" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="https://mail.google.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/jquery.dropotron.min.js"></script>
+<script src="js/jquery.scrollex.min.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/util.js"></script>
+<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
